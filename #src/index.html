@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('_head.html',{
+	"title":"Главная"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('_header.html',{})
+			<main class="page">
+				<section class="intro">
+					<div class="intro__container _container">
+						<div class="intro__body">
+							<h1 class="intro__title">
+								<span class="_badge">Оценка </span>
+								<span class="intro__quality">
+									<span class="intro__square intro__square-lt"></span>
+									<span class="intro__square intro__square-lb"></span>
+									<span class="intro__square intro__square-rt"></span>
+									<span class="intro__square intro__square-rb"></span>
+									<img src="img/intro/cursor.png" class="intro__cursor" alt=""> качества
+								</span> клиентского <span class="_badge">сервиса</span></h1>
+							<div class="intro__tabs tabs">
+								<div class="tabs-row">
+									<div class="tabs-btn _active">
+										<div class="tabs-label _badge">
+											<img src="img/intro/hero1.png" alt="">
+										</div>
+										<span class="tabs-text">
+											<h2 class="tabs-title">Тайный покупатель</h2>
+											<p>«Армия» настоящих клиентов…</p>
+										</span>
+									</div>
+									<div class="tabs-btn tabs-btn-right">
+										<div class="tabs-label _badge">
+											<img src="img/intro/hero2.png" alt="">
+										</div>
+										<span class="tabs-text">
+											<h2 class="tabs-title">Экспертная помощь</h2>
+											<p>Экспертный опыт для улучшения…</p>
+										</span>
+									</div>
+								</div>
+								<div class="tabs-line"></div>
+								<div class="tabs-item tabs-item-1">
+									<div class="tabs-item-title">
+										<h3 >Целая «армия» настоящих клиентов для анализа качества вашего сервиса по любым регионам</h3>
+									</div>
+									<div class="tabs-label _badge">
+										<img src="img/intro/hero1.png" alt="">
+									</div>
+									<div class="tabs-item-cont">
+										<div class="tabs-item-text">
+											<div class="tabs-item-listitem">
+												<div class="tabs-item-numb">
+													<span class="_badge">01</span>
+													<img src="img/intro/cursor.png" alt="">
+												</div>
+												<p class="tabs-item-about">У вас есть собственная методика и набор инструментов для анализа качества вашего сервиса, но необходимо улучшение.</p>
+											</div>
+											<div class="tabs-item-listitem">
+												<div class="tabs-item-numb">
+													<span class="_badge">02</span>
+													<img src="img/intro/cursor.png" alt="">
+												</div>
+												<p class="tabs-item-about">Мы поможем достичь совершенства на основе имеющегося у нас исследовательского опыта в вашей отрасли.</p>
+											</div>
+											<div class="tabs-item-listitem">
+												<div class="tabs-item-numb">
+													<span class="_badge">03</span>
+													<img src="img/intro/cursor.png" alt="">
+												</div>
+												<p class="tabs-item-about">Мы предоставим дополнительные инструменты, включая «тайных покупателей» для эффективного решения ваших задач.</p>
+											</div>
+											<div class="tabs-item-btns">
+												<a href="#" class="tabs-item-btn-order tabs-item-btn btn">Заказать услугу</a>
+												<a href="#" class="tabs-item-btn-learn tabs-item-btn btn">узнать больше</a>
+											</div>
+										</div>
+										<img class="tabs-item-img" src="img/intro/01.svg" alt="">
+										<div >
+											
+											<div class="tabs-item-circle"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="write">
+					<div class="write__container _container">
+						<div class="write__body _badge">
+							<img class="write__photo" src="img/write/photo01.jpg" alt="">
+							<div class="write__text">
+								<h2 class="write__title">ПОКА ВЫ ДУМАЕТЕ, что всё в порядке,</h2>
+								<p class="write__subtitle">ваши клиенты <span class="write__subtitle-bg"> уходят к конкурентам! </span></p>
+								<p class="write__tous">Свяжитесь с нашим специалистом для консультации <a href="mailto:info@ckins.ru" class="write__now">прямо сейчас</a>!</p>
+							</div>
+							<a href="mailto:info@ckins.ru" class="write__btn btn">Написать</a>
+						</div>
+					</div>
+				</section>
+			</main>
+			@@include('_footer.html',{})
+		</div>
+		@@include('_popup.html',{})
+		@@include('_js.html',{})
+	</body>
+</html>

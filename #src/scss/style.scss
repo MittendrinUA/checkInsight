@@ -1,0 +1,342 @@
+@use "sass:math";
+//<МИКСИНЫ>===============================================================================================
+@import "mixins";
+//</МИКСИНЫ>===============================================================================================
+
+//<ШРИФТЫ>===============================================================================================
+
+//<Подключаем шрифты>=======================================================================================
+//&display=swap&subset=cyrillic-ext
+@import "fonts";
+//</Подключаем шрифты>=======================================================================================
+
+//<Иконочные шрифты>==========================================================================================
+@import "iconsfont";
+//</Иконочные шрифты>==========================================================================================
+
+//<Шрифт по умолчанию>==========================================================================================
+$fontFamily: "";
+$fontSize: 16;
+//</Шрифт по умолчанию>==========================================================================================
+
+//</ШРИФТЫ>=======================================================================================================
+
+//<ПЕРЕМЕННЫЕ>==========================================================================================================
+$minWidth: 320px;
+$maxWidth: 1920;
+$maxWidthContainer: 1170;
+$md1: $maxWidthContainer + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+
+$mainColor: #000;
+
+//</ПЕРЕМЕННЫЕ>===========================================================================================================
+
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+@import "null";
+body {
+	color: $mainColor;
+	font-family: "Museo Sans Cyrl";
+	font-weight: 500;
+	&._lock {
+		overflow: hidden;
+	}
+}
+//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+
+//<ОБОЛОЧКА>===========================================================================================================
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	&._loaded {
+	}
+}
+//</ОБОЛОЧКА>===========================================================================================================
+
+//<ОСНОВНАЯ СЕТКА>===========================================================================================================
+._container {
+	max-width: $maxWidthContainer + px;
+	margin: 0 auto;
+	@media (max-width: $md1 + px) {
+		max-width: 970px;
+	}
+	@media (max-width: $md2+px) {
+		max-width: 750px;
+	}
+	@media (max-width: $md3+px) {
+		max-width: none;
+		padding: 0 10px;
+	}
+}
+//</ОСНОВНАЯ СЕТКА>===========================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+@import "forms";
+@import "ui";
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+//@import "datepicker";
+//@import "lightgallery";
+//@import "pagging";
+@import "popup";
+@import "header";
+@import "footer";
+@import "home";
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+
+//<ОСНОВНОЙ БЛОК>====================================================================================================
+.page {
+	flex: 1 1 auto;
+}
+//===================================================================================================================================
+
+//</ОСНОВНОЙ БЛОК>====================================================================================================
+
+.intro {
+	padding: 104px 0 68px;
+	overflow: hidden;
+	background: rgb(43,168,206);
+	background: linear-gradient(180deg, rgba(43,168,206,1) 0%, rgba(41,162,203,1) 35%, rgba(47,177,212,1) 100%);
+	@media (max-width:$md4+px){
+		padding: 60px 0 40px;  
+	}
+	&__title {
+		font-size: 60px;
+		line-height: 50px;
+		font-weight: 500;
+		color: #ffffff;
+		text-align: center;
+		@media (max-width:$md3+px){
+			 font-size: 50px;
+			 line-height: 50px; 
+		}
+		> span:last-child,
+		> span:first-child {
+			display: inline-block;
+			position: relative;
+		}
+		> span:first-child:before {
+			border: 5px solid #00df3d;
+			border-left-color: transparent;
+			border-top-color: transparent;
+			border-bottom-color: transparent;
+			top: -12px;
+			left: -5px;
+			@media (max-width:$md3+px){
+				top: -9px;
+				left: -9px;
+			}
+		}
+		> span:last-child:before {
+			border: 5px solid #fb961f;
+			border-right-color: transparent;
+			border-top-color: transparent;
+			border-bottom-color: transparent;
+			bottom: -10px;
+			right: 15px;
+			@media (max-width:$md3+px){
+				bottom: -7px;
+				right: 7px; 
+			}
+		}
+	}
+	&__quality {
+		display: inline-block;
+		padding: 5px 20px 10px;
+		border: 2px dashed #f0f0f0;
+		position: relative;
+		background-color: #1e8eb5;
+	}
+	&__cursor {
+		width: 24px;
+		height: 33px;
+		position: absolute;
+		bottom: -14px;
+		right: 92px;
+	}
+	&__square {
+		display: block;
+		position: absolute;
+		width: 10px;
+		height: 10px;
+		border: 2px solid #f0f0f0;
+		background-color: #28a0ca;
+	}
+	&__square-lt {
+		top: -6px;
+		left: -6px;
+	}
+	&__square-lb {
+		bottom: -6px;
+		left: -6px;
+	}
+	&__square-rt {
+		top: -6px;
+		right: -6px;
+	}
+	&__square-rb {
+		bottom: -6px;
+		right: -6px;
+	}
+	&__tabs {
+		margin-top: 60px;
+	}
+}
+
+//===================================================================================================================================
+
+.write {
+	padding: 40px 0;
+	overflow: hidden;
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		@media (max-width:$md2+px){
+			flex-wrap: wrap;
+		}
+	}
+	&__photo {
+		display: block;
+		flex: 0 1 auto;
+		position: absolute;
+		z-index: -1;
+		bottom: -50px;
+		left: -50px;
+		@media (max-width:$md1+px){
+			opacity: 0.4;
+		}
+	}
+	&__body::before {
+		border: 5px solid #ff6804;
+		border-left-color: transparent;
+		border-right-color: transparent;
+		border-top-color: transparent;
+		top: -30px;
+	}
+	&__body::after {
+		content: url(../img/write/question.png);
+		position: absolute;
+		left: 165px;
+		top: -55px;
+		opacity: 0.8;
+		@media (max-width:$md3+px){
+			 display: none; 
+		}
+	}
+	&__text {
+		flex: 0 1 auto;
+		padding-left: 310px;
+		position: relative;
+		z-index: 3;
+		@media (max-width:$md1+px){
+			padding-left: 60px;
+		}
+	}
+	&__title {
+		font-family: Commissioner;
+		font-size: 25px;
+		line-height: 30px;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: #4b5763;
+	}
+	&__subtitle {
+		margin-top: 20px;
+		font-family: 'Museo Sans Cyrl';
+		font-size: 25px;
+		line-height: 35px;
+		font-weight: 500;
+		color: #4b5763;
+		@media (max-width:$md4+px){
+			 font-size: 20px;
+			 line-height: 20px; 
+		}
+	}
+	&__subtitle-bg{
+		display: inline-block;
+		padding: 0 10px;
+		background-image: url(../img/write/bg.png);
+		background-repeat: no-repeat;
+		background-size: 304px 41px contain;
+		background-position: center;
+		@media (max-width:$md4+px){
+			background-size: contain;
+			padding: 10px;
+		}
+	}
+	&__tous {
+		font-family: 'Museo Sans Cyrl';
+		font-size: 18px;
+		line-height: 24px;
+		font-weight: 500;
+		color: #6a7279;
+		margin-top: 20px;
+		position: relative;
+		a {
+			font-weight: 700;
+			color: #08a426;
+		}
+		@media (any-hover: hover) {
+			a:hover {
+				text-decoration: underline;
+			}
+		}
+		@media (max-width:$md4+px){
+			 font-size: 14px;
+			 line-height: 16px; 
+		}
+		
+	}
+	&__tous::before {
+		content: '';
+		display: block;
+		position: absolute;
+		z-index: 2;
+		width: 47px;
+		height: 1px;
+		background-color: #CDCECE;
+		top: 50%;
+		transform: translateY(-50%);
+		left: -65px;
+		@media (max-width:$md2+px){
+			display: none;
+		}
+	}
+	&__btn {
+		flex: 0 1 auto;
+		align-self: center;
+		background-color: #00A020;
+		color: #ececec;
+		padding: 24px 40px;
+		font-size: 17px;
+		font-weight: 700;
+		position: relative;
+		@media (max-width:$md2+px){
+			margin: 25px auto 0;
+		}
+	}
+	&__btn::before {
+		content: url(../img/intro/shadow.png);
+		position: absolute;
+		top: -5px;
+		right: 0px;
+		opacity: 0.18;
+	}
+	@media (any-hover: hover) {
+		&__btn:hover {
+			background-color: #2CAACF;
+			color: #E1E8EA;
+		}
+	}
+}
+
+//===================================================================================================================================
+
+
+//===================================================================================================================================

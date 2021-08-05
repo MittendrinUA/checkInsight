@@ -1,0 +1,242 @@
+//====================================================================================================
+
+//====================================================================================================
+
+
+//Burger
+.icon-menu {
+	display: none;
+	@media (max-width: $md2+px) {
+		display: block;
+		position: absolute;
+		top: 18px;
+		right: 10px;
+		width: 30px;
+		height: 18px;
+		cursor: pointer;
+		z-index: 5;
+		span {
+			transition: all 0.3s ease 0s;
+			top: calc(50% - 1px);
+			left: 0px;
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			background-color: #000;
+			&:first-child {
+				top: 0px;
+			}
+			&:last-child {
+				top: auto;
+				bottom: 0px;
+			}
+		}
+		&._active {
+			span {
+				transform: scale(0);
+				&:first-child {
+					transform: rotate(-45deg);
+					top: calc(50% - 1px);
+				}
+				&:last-child {
+					transform: rotate(45deg);
+					bottom: calc(50% - 1px);
+				}
+			}
+		}
+	}
+}
+
+
+
+//====================================================================================================
+
+.header {
+	width: 100%;
+	background-color: #f0f0f0;
+	&__body {
+		@media (max-width:$md2+px){
+			display: flex;
+			padding: 20px 0;
+		}
+	}
+	&__top {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		padding: 28px 0;
+		border-bottom: 1px solid #d3d6d9;
+		@media (max-width:$md2+px){
+			width: auto;
+			border-bottom: none;
+			flex: 1 0 auto;
+			padding: 0;
+		}
+	}
+	&__logo {
+		width: 138px;
+		height: 63px;
+		flex: 0 1 auto;
+		@media (max-width:$md2+px){
+			width: 90px;
+			height: 40px;
+		}
+	}
+	._badge:before {
+		right: -30px;
+		top: 50%;
+		transform: translateY(-50%);
+		@media (max-width:$md2+px){
+			display: none;
+		}
+	}
+	&__descr {
+		margin-left: 50px;
+		font-family: Commissioner;
+		font-size: 14px;
+		line-height: 23px;
+		font-weight: 400;
+		color: #000000;
+		flex: 1 0 auto;
+		p {
+			max-width: 200px;
+		}
+		@media (max-width:$md2+px){
+			display: none;
+		}
+	}
+	&__loc {
+		position: relative;
+		flex: 0 1 auto;
+		padding-right: 15px;
+		font-family: 'Museo Sans Cyrl';
+		font-size: 19px;
+		font-weight: 500;
+		color: #00a120;
+		transition: all 0.3s ease 0s;
+		@media (max-width:$md2+px){
+			display: none;
+		}
+	}
+	&__loc::before {
+		content: url(../img/header/map-locator-color.svg);
+		display: inline-block;
+		position: absolute;
+		left: -30px;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 22px;
+		height: 28px;
+		color: #bdc0c1;
+	}
+	&__loc::after {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 50%;
+		right: 0;
+		width: 7px;
+		height: 7px;
+		border-top: 2px solid #17425c;
+		border-right: 2px solid #17425c;
+		transform: translateY(-50%) rotate(-225deg);
+		transition: all 0.3s ease 0s;
+	}
+	@media (any-hover: hover) {
+		&__loc:hover {
+			color: #728082;
+		}
+		&__loc:hover:after {
+			border-top: 2px solid #00a120;
+			border-right: 2px solid #00a120;
+		}
+	}
+	&__main {
+		border-top: 1px solid #fff;
+		padding: 33px 0;
+		display: flex;
+		align-items: center;
+		position: relative;
+		@media (max-width:$md2+px){
+			border-top: none;
+			padding: 0;
+		}
+	}
+	&__menu {
+		flex: 1 0 auto;
+		@media (max-width:$md2+px){
+			display: none;
+		}
+	}
+	&__cont {
+		margin-left: 20px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+	}
+	&__phone {
+		line-height: 22px;
+		font-size: 22px;
+		font-weight: 700;
+		color: #000000;
+		@media (max-width:$md2+px){
+			 font-size: 18px; 
+		}
+		@media (max-width:$md4+px){
+			 font-size: 16px; 
+		}
+	}
+	&__email {
+		margin-top: 10px;
+		font-size: 17px;
+		font-weight: 500;
+		text-decoration: underline;
+		color: #00a120;
+		transition: all 0.3s ease 0s;
+		position: relative;
+		@media (max-width:$md2+px){
+			 margin-top: 5px; 
+		}
+		@media (max-width:$md4+px){
+			 font-size: 15px; 
+		}
+	}
+	@media (any-hover: hover) {
+		&__email:hover {
+			color: #000;
+		}
+	}
+	&__email:before {
+		content: url(../img/header/mail-color.svg);
+		display: inline-block;
+		width: 30px;
+		height: 20px;
+		position: absolute;
+		left: -42px;
+		top: 50%;
+		transform: translateY(-50%);
+		text-decoration: none;
+	}
+	&__btn {
+		margin-left: 31px;
+		@media (max-width:$md2+px){
+			display: none;
+		}
+	}
+	@media (any-hover: hover) {
+		&__btn:hover {
+			background-color: #2CA9CF;
+			color: #fff;
+		}
+	}
+	&__icon {
+		position: inherit;
+		top: 0;
+		left: 0;
+		margin-left: 20px;
+	}
+
+}
+//====================================================================================================
+
+
