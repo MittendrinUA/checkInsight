@@ -1817,6 +1817,15 @@ body.ie ._ibg img {
   right: 0px;
   opacity: 0.18;
 }
+.write__btn::after {
+  content: url(../img/intro/cursor.png);
+  display: block;
+  width: 16px;
+  height: 23px;
+  position: absolute;
+  right: 20px;
+  bottom: -8px;
+}
 @media (any-hover: hover) {
   .write__btn:hover {
     background-color: #2CAACF;

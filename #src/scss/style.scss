@@ -328,6 +328,15 @@ body {
 		right: 0px;
 		opacity: 0.18;
 	}
+	&__btn::after {
+		content: url(../img/intro/cursor.png);
+		display: block;
+		width: 16px;
+		height: 23px;
+		position: absolute;
+		right: 20px;
+		bottom: -8px;
+	}
 	@media (any-hover: hover) {
 		&__btn:hover {
 			background-color: #2CAACF;
