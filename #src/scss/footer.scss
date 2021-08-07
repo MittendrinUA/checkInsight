@@ -1,4 +1,164 @@
-footer {
+.footer {
+    background-color: #4D5456;
+    padding: 54px 0 62px;
+    @media (max-width:$md4+px){
+        padding: 25px 0;
+    }
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        @media (max-width:$md3+px){
+             flex-wrap: wrap; 
+        }
+    }
+    &__left {
+        flex: 0 1 310px;
+        @media (max-width:$md3+px){
+            order: 0;
+            flex: 0 1 100%; 
+        }
+    }
+    &__logo {
+        display: block;
+        width: 185px;
+        height: 43px;
+        @media (max-width:$md3+px){
+             margin: 0 auto; 
+        }
+    }
+    &__addr {
+        margin-top: 40px;
+        padding-left: 40px;
+        @media (max-width:$md4+px){
+             margin-top: 30px; 
+        }
+        p {
+            font-size: 17px;
+            line-height: 27px;
+            font-weight: 300;
+            color: #ffffff;
+            position: relative;
+        }
+        p::before {
+            position: absolute;
+            left: -40px;
+            font-size: 27px;
+        }
+        a {
+            margin-top: 15px;
+        }
+    }
+    &__link {
+        display: inline-block;
+        font-size: 17px;
+        font-weight: 500;
+        color: #14b4d8;
+        transition: all 0.3s ease 0s;
+        @media (any-hover: hover) {
+            &:hover {
+                color: #F7F7F7;
+            }
+        }
+    }
+    &__menu {
+        margin-left: 114px;
+        flex: 0 1 475px;
+        @media (max-width:$md1+px){
+             flex: 0 1 auto; 
+        }
+        @media (max-width:$md3+px){
+             order: 2; 
+             flex: 0 1 100%;
+             margin-left: 0;
+        }
+    }
+    &__cont {
+        flex: 0 1 195px;
+        margin-left: 70px;
+        text-align: right;
+        a {
+            display: inline-block;
+        }
+        @media (max-width:$md2+px){
+            flex: 0 1 280px;
+            margin-left: 20px;
+        }
+        @media (max-width:$md3+px){
+            order: 1;
+            margin-left: 0;
+            margin-top: 30px; 
+            flex: 0 1 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+    &__phone {
+        font-size: 22px;
+        font-weight: 700;
+        color: #f7f7f7;
+    }
+    &__email {
+        margin-top: 15px;
+        font-size: 17px;
+        font-weight: 500;
+        text-decoration: underline;
+        color: #abadad;
+        transition: all 0.3s ease 0s;
+        &::before {
+            content: url(../img/header/mail-color.svg);
+            width: 30px;
+            height: 18px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                color: #F7F7F7;
+            }
+        }
+        @media (max-width:$md3+px){
+           margin-top: 20px;
+       }
+    }
+    &__btn {
+        margin-top: 36px;
+        padding: 21px 19px;
+        background-color: #676b6c;
+        box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.02);
+        font-size: 14px;
+        color: #f7f7f7;
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: #3E4648;
+            }
+        }
+        @media (max-width:$md3+px){
+             margin-top: 20px; 
+        }
+        @media (max-width:$md4+px){
+             width: 100%;
+             text-align: center; 
+        }
+    }
+    &__copy {
+        margin-top: 55px;
+        padding-left: 30px;
+        font-size: 15px;
+        line-height: 25px;
+        font-weight: 300;
+        color: #b8bec0;
+        &::before {
+            left: -30px;
+        }
+        @media (max-width:$md3+px){
+             font-size: 12px; 
+             line-height: 18px;
+             padding-left: 15px;
+             margin-top: 30px;
+        }
+    }
 }
 //====================================================================================================
 
