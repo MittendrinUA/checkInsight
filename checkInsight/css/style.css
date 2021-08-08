@@ -1373,9 +1373,18 @@ body.ie ._ibg img {
   height: 98px;
   background-color: #fff;
   border-radius: 12px;
+  position: relative;
 }
 
 .slider-reviews__logo img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   max-width: 70px;
   max-height: 70px;
 }
