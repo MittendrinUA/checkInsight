@@ -211,14 +211,25 @@ body {
 		@media (max-width:$md1+px){
 			opacity: 0.4;
 		}
+		@media (max-width:$md4+px){
+			transform: scale(0.85);
+			bottom: -70px;
+			left: -100px;
+		}
 	}
 	&__photo-man {
 		left: 10px;
 		bottom: -130px;
+		@media (max-width:$md4+px){
+			left: -20px;  
+		}
 	}
 	&__photo-woman {
 		left: 10px;
 		bottom: -185px;
+		@media (max-width:$md4+px){
+			left: -30px;  
+		}
 	}
 	&__body::before {
 		border: 5px solid #ff6804;
@@ -344,6 +355,9 @@ body {
 		@media (max-width:$md2+px){
 			margin: 25px auto 0;
 		}
+		@media (max-width:$md4+px){
+			 margin: 25px 10px 0 auto; 
+		}
 	}
 	&__btn::before {
 		content: url(../img/intro/shadow.png);
@@ -353,7 +367,7 @@ body {
 		opacity: 0.18;
 	}
 	&__btn::after {
-		content: url(../img/intro/cursor.png);
+		content: url(../img/intro/arrow.svg);
 		display: block;
 		width: 16px;
 		height: 23px;
@@ -505,6 +519,9 @@ body {
 		@media (max-width:$md2+px){
 			justify-content: center;
 		}
+		@media (max-width:$md4+px){
+			margin: 30px -5px 0;	  
+		}
 	}
 	&__item {
 		width: 170px;
@@ -520,6 +537,11 @@ body {
 		align-items: center;
 		margin: 15px;
 		overflow: hidden;
+		@media (max-width:$md4+px){
+			 margin: 5px;
+			 width: 140px;
+			 height: 124px; 
+		}
 	}
 	&__item::before {
 		content: '';
@@ -558,6 +580,10 @@ body {
 		top: 50%;
 		transform: translate(-50%, -50%);
 		transition: all 0.3s ease 0s;
+		@media (max-width:$md4+px){
+			max-width: 120px;
+			max-height: 70px; 
+		}
 	}
 	&__brand-white {
 		opacity: 0;
@@ -566,10 +592,16 @@ body {
 	&__brand-140 {
 		max-width: none;
 		width: 140px;
+		@media (max-width:$md4+px){
+			 width: 120px; 
+		}
 	}
 	&__brand-130 {
 		max-width: none;
 		width: 130px;
+		@media (max-width:$md4+px){
+			 width: 120px; 
+		}
 	}
 	&__bg {
 		position: absolute;
@@ -758,8 +790,22 @@ body {
 	&__text {
 		position: relative;
 		padding-right: 50px;
-		// overflow: auto;
-		// max-height: 330px;
+		overflow: auto;
+		max-height: 330px;
+		&::-webkit-scrollbar { /* 1 - скроллбар */
+			width: 2px;
+			height: 2px;
+			background-color: #B2B2B2;
+			border-radius: 12px;
+		}
+		
+		&::-webkit-scrollbar-button { /* 2 - кнопка */
+			display: none;
+		}
+		&::-webkit-scrollbar-thumb { /* 5 - ползунок */
+		border-radius: 12px;
+		background-color: #14B4D7;
+		}
 		@media (max-width:$md3+px){
 			 padding-right: 15px; 
 		}
@@ -786,40 +832,22 @@ body {
 			margin-top: 15px; 
 	   }
 	}
-	&__scroll {
-		display: block;
-		width: 2px;
-		height: 100%;
-		position: absolute;
-		right: 0px;
-		top: 10px;
-		background-color: #B2B2B2;
-		span {
-			display: block;
-			width: 2px;
-			height: 84px;
-			position: absolute;
-			right: 0;
-			top: 55px;
-			background-color: #14B4D7;
-		}
-	}
 	&__nav {
 		display: flex;
 		align-items: center;
+		justify-content: space-between;
 		margin-top: 30px;
-		@media (max-width:$md4+px){
-			 justify-content: space-around; 
-		}
+		position: relative;
 	}
-	&__link {
+	&__arrow {
+		font-family: 'Museo Sans Cyrl';
 		font-size: 18px;
 		line-height: 25px;
 		font-weight: 500;
 		color: #08a426;
 		transition: all 0.3s ease 0s;
 		@media (max-width:$md4+px){
-			 display: none; 
+			font-size: 0;
 		}
 		@media (any-hover: hover) {
 			&:hover {
@@ -835,7 +863,8 @@ body {
 		flex: 0 1 auto;
 		margin: 0px auto 0px 0px;
 	}
-	&__arrow-left::before {
+	&__arrow::before {
+		display: inline-block;
 		margin: 0px 13px 0px 0px;
 		background-color: rgba(255, 255, 255, 0.25);
 		padding: 12px;
@@ -848,17 +877,25 @@ body {
 			 font-size: 20px; 
 		}
 	}
-	&__arrow-right::before {
-		display: inline-block;
-		margin: 0px 0px 0px 13px;
-		background-color: rgba(255, 255, 255, 0.25);
-		padding: 12px;
-		color: #D0D2D5;
-		border-radius: 12px;
-		font-weight: 700;
-		transform: rotate(180deg);
-		transition: all 0.3s ease 0s;
+	&__arrow-right {
+		padding-right: 58px;
 		@media (max-width:$md3+px){
+			 padding-right: 75px; 
+		}
+		@media (max-width:$md4+px){
+			 padding-right: 0; 
+		}
+	}
+	&__arrow-right::before {
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%) rotate(180deg);
+		transition: all 0.3s ease 0s;
+		margin-right: 0;
+		@media (max-width:$md4+px){
+			position: relative;
+			transform: translateY(0) rotate(180deg);
 			padding: 20px;
 			font-size: 20px; 
 	   }

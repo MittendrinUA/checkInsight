@@ -40,9 +40,12 @@
             position: relative;
         }
         p::before {
+            content: url('../img/header/map-locator-color.svg');
             position: absolute;
+            z-index: 3;
+            width: 21px;
+            height: 27px;
             left: -40px;
-            font-size: 27px;
         }
         a {
             margin-top: 15px;
