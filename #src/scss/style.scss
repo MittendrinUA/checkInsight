@@ -221,14 +221,16 @@ body {
 		left: 10px;
 		bottom: -130px;
 		@media (max-width:$md4+px){
-			left: -20px;  
+			left: -35px !important; 
+			bottom: -150px !important; 
 		}
 	}
 	&__photo-woman {
 		left: 10px;
 		bottom: -185px;
 		@media (max-width:$md4+px){
-			left: -30px;  
+			left: -40px !important; 
+			bottom: -200px !important; 
 		}
 	}
 	&__body::before {

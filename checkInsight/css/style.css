@@ -3268,11 +3268,13 @@ body.ie ._ibg img {
   }
 
   .write__photo-man {
-    left: -20px;
+    left: -35px !important;
+    bottom: -150px !important;
   }
 
   .write__photo-woman {
-    left: -30px;
+    left: -40px !important;
+    bottom: -200px !important;
   }
 
   .write__body::before {
