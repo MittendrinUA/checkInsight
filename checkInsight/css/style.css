@@ -2151,7 +2151,7 @@ body.ie ._ibg img {
   position: relative;
 }
 
-.write__tous a {
+.write__tous span {
   font-weight: 700;
   color: #08a426;
 }
@@ -2553,6 +2553,8 @@ body.ie ._ibg img {
   padding-right: 50px;
   overflow: auto;
   max-height: 330px;
+  scrollbar-color: #14b4d7 #b2b2b2;
+  scrollbar-width: thin;
 }
 
 .cases__text::-webkit-scrollbar {
@@ -2600,7 +2602,9 @@ body.ie ._ibg img {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 30px;
+  margin-left: auto;
   position: relative;
+  max-width: 835px;
 }
 
 .cases__arrow {
@@ -2819,6 +2823,10 @@ body.ie ._ibg img {
   .cases__slider {
     max-width: 650px;
   }
+
+  .cases__nav {
+    max-width: 650px;
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -2961,6 +2969,10 @@ body.ie ._ibg img {
   }
 
   .cases__slider {
+    max-width: 500px;
+  }
+
+  .cases__nav {
     max-width: 500px;
   }
 }
@@ -3129,6 +3141,10 @@ body.ie ._ibg img {
 
   .cases__text {
     padding-right: 15px;
+  }
+
+  .cases__nav {
+    max-width: none;
   }
 
   .cases__arrow::before {
@@ -3470,10 +3486,6 @@ body.ie ._ibg img {
 
   .footer__btn:hover {
     background-color: #3E4648;
-  }
-
-  .write__tous a:hover {
-    text-decoration: underline;
   }
 
   .write__btn:hover {

@@ -315,14 +315,9 @@ body {
 		color: #6a7279;
 		margin-top: 20px;
 		position: relative;
-		a {
+		span {
 			font-weight: 700;
 			color: #08a426;
-		}
-		@media (any-hover: hover) {
-			a:hover {
-				text-decoration: underline;
-			}
 		}
 		@media (max-width:$md3+px){
 			 font-size: 14px;
@@ -794,6 +789,8 @@ body {
 		padding-right: 50px;
 		overflow: auto;
 		max-height: 330px;
+		scrollbar-color: #14b4d7 #b2b2b2;
+		scrollbar-width: thin;
 		&::-webkit-scrollbar { /* 1 - скроллбар */
 			width: 2px;
 			height: 2px;
@@ -839,7 +836,18 @@ body {
 		align-items: center;
 		justify-content: space-between;
 		margin-top: 30px;
+		margin-left: auto;
 		position: relative;
+		max-width: 835px;
+		@media (max-width:$md1+px){
+			max-width: 650px; 
+	   }
+	   @media (max-width:$md2+px){
+		   max-width: 500px;
+	   }
+	   @media (max-width:$md3+px){
+			max-width: none; 
+	   }
 	}
 	&__arrow {
 		font-family: 'Museo Sans Cyrl';
