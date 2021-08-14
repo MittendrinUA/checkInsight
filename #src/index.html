@@ -19,9 +19,9 @@
 									<span class="intro__square intro__square-rb"></span>
 									<img src="img/intro/arrow.svg" class="intro__cursor" alt=""> качества
 								</span> клиентского <span class="_badge">сервиса</span></h1>
-							<div class="intro__tabs tabs">
+							<div class="intro__tabs tabs _tabs">
 								<div class="tabs-row">
-									<div class="tabs-btn tabs-btn-left _active">
+									<div class="tabs-btn tabs-btn-left _active _tabs-item">
 										<div class="tabs-label _badge">
 											<img src="img/intro/tab1.svg" alt="">
 										</div>
@@ -30,7 +30,7 @@
 											<p>«Армия» настоящих клиентов…</p>
 										</span>
 									</div>
-									<div class="tabs-btn tabs-btn-right">
+									<div class="tabs-btn tabs-btn-right _tabs-item" data-src="tabs-item-1">
 										<div class="tabs-label _badge">
 											<img src="img/intro/tab2.svg" alt="">
 										</div>
@@ -41,7 +41,7 @@
 									</div>
 								</div>
 								<div class="tabs-line"></div>
-								<div class="tabs-item tabs-item-1 _active">
+								<div class="tabs-item tabs-item-1 _active _tabs-block">
 									<div class="tabs-item-title">
 										<h3 >Целая «армия» настоящих клиентов для анализа качества вашего сервиса по любым регионам</h3>
 									</div>
@@ -80,7 +80,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="tabs-item tabs-item-2">
+								<div class="tabs-item tabs-item-2 _tabs-block">
 									<div class="tabs-item-title">
 										<h3 >Наш передовой экспертный опыт
 											для улучшения ваших собственных исследований</h3>
@@ -145,7 +145,40 @@
 							<h3 class="stock__subtitle">Закажите 7 проверок бесплатно!</h3>
 							<p class="stock__text">Посмотрите, как они будут выглядеть
 								на нашем портале и оцените качество!</p>
-							<div class="stock__timer"></div>
+							<div class="stock__timer timer">
+								<h4 class="timer-title">Осталось</h4>
+								<div class="timer-body">
+									<div class="timer-hrs">
+										<div class="timer-numbers">
+											<span class="timer-l timer-hrs-l"></span>
+											<span class="timer-r timer-hrs-r"></span>
+										</div>
+										<span class="timer-name timer-name-hrs"></span>
+									</div>
+									<div class="timer-dots">
+										<span></span>
+										<span></span>
+									</div>
+									<div class="timer-min">
+										<div class="timer-numbers">
+											<span class="timer-l timer-min-l"></span>
+											<span class="timer-r timer-min-r"></span>
+										</div>
+										<span class="timer-name timer-name-min"></span>
+									</div>
+									<div class="timer-dots">
+										<span></span>
+										<span></span>
+									</div>
+									<div class="timer-sec">
+										<div class="timer-numbers">
+											<span class="timer-l timer-sec-l"></span>
+											<span class="timer-r timer-sec-r"></span>
+										</div>
+										<span class="timer-name timer-name-sec"></span>
+									</div>
+								</div>
+							</div>
 							<a href="#" class="stock__btn btn">Участвовать</a>
 						</div>
 					</div>
@@ -309,19 +342,39 @@
 					<div class="cases__container _container">
 						<div class="cases__body">
 							<h2 class="cases__title _title _badge">Кейсы</h2>	
-							<div class="cases__slider">
-								<h3 class="cases__subtitle _badge"><a href="#">Автомобильная <br>отрасль</a></h3>
-								<div class="cases__text">
-									<p class="cases__text-bold">Известный автомобильный производитель искал на рынке подрядчика, который сможет регулярно находить «тайных клиентов»-владельцев автомобилей его марки, проходящих плановое ТО и способных адекватно оценить качество обслуживания.</p>
-									<p class="cases__text-light">Доля рынка у данного бренда в России – небольшая. Найти реальных клиентов, готовых стать тайным покупателем и оценить обслуживание в рамках своего естественного визита, – задача непростая. Заказчика неоднократно посещали мысли о закрытии проекта. Наша компания взялась за проект. 3 месяца ушло на отстройку процессов, которые помогли бы рекрутировать на территории в России не менее 100 таких тайных покупателей в квартал и предоставлять Заказчику надежные достоверные данные на регулярной основе. <br> Доля рынка у данного бренда в России – небольшая. Найти реальных клиентов, готовых стать тайным покупателем и оценить обслуживание в рамках своего естественного визита, – задача непростая. Заказчика неоднократно посещали мысли о закрытии проекта. Наша компания взялась за проект. 3 месяца ушло на отстройку процессов, которые помогли бы рекрутировать на территории в России не менее 100 таких тайных покупателей в квартал и предоставлять Заказчику надежные достоверные данные на регулярной основе
-									</p>
+							<div class="cases__slider swiper-container">
+								<div class="cases__slider-body swiper-wrapper">
+									<div class="swiper-slide cases__item">
+										<h3 class="cases__subtitle _badge"><a href="#">Автомобильная отрасль</a></h3>
+										<div class="cases__text">
+											<p class="cases__text-bold">Известный автомобильный производитель искал на рынке подрядчика, который сможет регулярно находить «тайных клиентов»-владельцев автомобилей его марки, проходящих плановое ТО и способных адекватно оценить качество обслуживания.</p>
+											<p class="cases__text-light">Доля рынка у данного бренда в России – небольшая. Найти реальных клиентов, готовых стать тайным покупателем и оценить обслуживание в рамках своего естественного визита, – задача непростая. Заказчика неоднократно посещали мысли о закрытии проекта. Наша компания взялась за проект. 3 месяца ушло на отстройку процессов, которые помогли бы рекрутировать на территории в России не менее 100 таких тайных покупателей в квартал и предоставлять Заказчику надежные достоверные данные на регулярной основе. <br> Доля рынка у данного бренда в России – небольшая. Найти реальных клиентов, готовых стать тайным покупателем и оценить обслуживание в рамках своего естественного визита, – задача непростая. Заказчика неоднократно посещали мысли о закрытии проекта. Наша компания взялась за проект. 3 месяца ушло на отстройку процессов, которые помогли бы рекрутировать на территории в России не менее 100 таких тайных покупателей в квартал и предоставлять Заказчику надежные достоверные данные на регулярной основе
+											</p>
+										</div>
+									</div>
+									<div class="swiper-slide cases__item">
+										<h3 class="cases__subtitle _badge"><a href="#">Ритейл</a></h3>
+										<div class="cases__text">
+											<p class="cases__text-bold">Известный автомобильный производитель искал на рынке подрядчика, который сможет регулярно находить «тайных клиентов»-владельцев автомобилей его марки, проходящих плановое ТО и способных адекватно оценить качество обслуживания.</p>
+											<p class="cases__text-light">Доля рынка у данного бренда в России – небольшая. Найти реальных клиентов, готовых стать тайным покупателем и оценить обслуживание в рамках своего естественного визита, – задача непростая. Заказчика неоднократно посещали мысли о закрытии проекта. Наша компания взялась за проект. 3 месяца ушло на отстройку процессов, которые помогли бы рекрутировать на территории в России не менее 100 таких тайных покупателей в квартал и предоставлять Заказчику надежные достоверные данные на регулярной основе. <br> Доля рынка у данного бренда в России – небольшая. Найти реальных клиентов, готовых стать тайным покупателем и оценить обслуживание в рамках своего естественного визита, – задача непростая. Заказчика неоднократно посещали мысли о закрытии проекта. Наша компания взялась за проект. 3 месяца ушло на отстройку процессов, которые помогли бы рекрутировать на территории в России не менее 100 таких тайных покупателей в квартал и предоставлять Заказчику надежные достоверные данные на регулярной основе
+											</p>
+										</div>
+									</div>
+									<div class="swiper-slide cases__item">
+										<h3 class="cases__subtitle _badge"><a href="#">Банковская отрасль</a></h3>
+										<div class="cases__text">
+											<p class="cases__text-bold">Известный автомобильный производитель искал на рынке подрядчика, который сможет регулярно находить «тайных клиентов»-владельцев автомобилей его марки, проходящих плановое ТО и способных адекватно оценить качество обслуживания.</p>
+											<p class="cases__text-light">Доля рынка у данного бренда в России – небольшая. Найти реальных клиентов, готовых стать тайным покупателем и оценить обслуживание в рамках своего естественного визита, – задача непростая. Заказчика неоднократно посещали мысли о закрытии проекта. Наша компания взялась за проект. 3 месяца ушло на отстройку процессов, которые помогли бы рекрутировать на территории в России не менее 100 таких тайных покупателей в квартал и предоставлять Заказчику надежные достоверные данные на регулярной основе. <br> Доля рынка у данного бренда в России – небольшая. Найти реальных клиентов, готовых стать тайным покупателем и оценить обслуживание в рамках своего естественного визита, – задача непростая. Заказчика неоднократно посещали мысли о закрытии проекта. Наша компания взялась за проект. 3 месяца ушло на отстройку процессов, которые помогли бы рекрутировать на территории в России не менее 100 таких тайных покупателей в квартал и предоставлять Заказчику надежные достоверные данные на регулярной основе
+											</p>
+										</div>
+									</div>
 								</div>
 							</div>
 							<div class="cases__nav">
-								<button class="cases__arrow cases__arrow-left _icon-arrow-pointing-left">Банковская отрасль</button>									
-								<button class="cases__arrow cases__arrow-right _icon-arrow-pointing-left">Ритейл</button>
+								<button class="cases__arrow cases__arrow-left _icon-arrow-pointing-left swiper-button-prev"></button>		
+								<button class="cases__arrow cases__arrow-right _icon-arrow-pointing-left swiper-button-next"></button>
 							</div>
-							<div class="cases__dots"></div>
+							<div class="cases__dots swiper-pagination"></div>
 						</div>
 					</div>
 				</section>
@@ -346,9 +399,68 @@
 								<button class="reviews__btn reviews__btn-left _icon-arrow-pointing-left"></button>
 								<button class="reviews__btn reviews__btn-right _icon-arrow-pointing-left"></button>
 							</div>
-							<div class="reviews__slider slider-reviews">
-								<div class="slider-reviews__body">
-									<div class="slider-reviews__item">
+							<div class="reviews__slider slider-reviews swiper-container">
+								<div class="slider-reviews__body swiper-wrapper">
+									<div class="slider-reviews__item swiper-slide">
+										<div class="slider-reviews__title">
+											<a href="https://www.nespresso.com/ru/ru/" class="slider-reviews__logo" target="_blank"><img src="img/clients/logo/nespresso.svg" alt=""></a>
+											<div class="slider-reviews__auth">
+												<h3 class="slider-reviews__name"><a href="https://www.nespresso.com/ru/ru/" target="_blank">Антони Дюваль</a></h3>
+												<p class="slider-reviews__pos">Глобальный менеджер <br>по клиентскому сервису Nespresso</p>
+											</div>
+										</div>
+										<div class="slider-reviews__text">
+											<span class="_badge slider-reviews__badge slider-reviews__badge-1"></span>
+											<span class="_badge slider-reviews__badge slider-reviews__badge-2"></span>
+											<p>C 2016 года CHECK INSIGHT и Nespresso работают вместе, улучшая сервис в офлайн и онлайн сегментах нашего бизнеса. Как партнеры, мы разделяем общие взгляды на долгосрочные отношения, построенные на доверии, прозрачности и готовности совершенствоваться.</p>
+										</div>
+										<a href="#" class="slider-reviews__btn _icon-attach-file">официальное письмо</a>
+									</div>
+									<div class="slider-reviews__item swiper-slide">
+										<div class="slider-reviews__title">
+											<a href="https://mcdonalds.ru/" class="slider-reviews__logo" target="_blank"><img src="img/clients/logo/mcdonalds.svg" alt="Mcdonalds"></a>
+											<div class="slider-reviews__auth">
+												<h3 class="slider-reviews__name"><a href="https://mcdonalds.ru/" target="_blank">Кристоф Бикель</a></h3>
+												<p class="slider-reviews__pos">Национальный менеджер <br>по операциям Макдоналдс</p>
+											</div>
+										</div>
+										<div class="slider-reviews__text">
+											<span class="_badge slider-reviews__badge slider-reviews__badge-1"></span>
+											<span class="_badge slider-reviews__badge slider-reviews__badge-2"></span>
+											<p>Наши клиенты – центр всего, что мы делаем! Мы учимся у них каждый день. Это ключ к ежедневной обратной связи и пониманию, чего они действительно хотят. CHECK INSIGHT ежедневно делают важные открытия для нашего бизнеса на международном уровне.</p>
+										</div>
+									</div>
+									<div class="slider-reviews__item swiper-slide">
+										<div class="slider-reviews__title">
+											<a href="https://mydutyfree.net/ru" class="slider-reviews__logo" target="_blank"><img src="img/clients/logo/dufry.svg" alt=""></a>
+											<div class="slider-reviews__auth">
+												<h3 class="slider-reviews__name"><a href="https://mydutyfree.net/ru" target="_blank">Эвелин Эстафанио</a></h3>
+												<p class="slider-reviews__pos">Какой-то очень важный человек <br>в компании Dufry</p>
+											</div>
+										</div>
+										<div class="slider-reviews__text">
+											<span class="_badge slider-reviews__badge slider-reviews__badge-1"></span>
+											<span class="_badge slider-reviews__badge slider-reviews__badge-2"></span>
+											<p>CHECK INSIGHT предоставляют отличный сервис! Специалисты всегда очень вежливы и готовы найти оптимальное решение для наших потребностей. Они всегда удивляют своей инициативой.</p>
+										</div>
+										<a href="#" class="slider-reviews__btn _icon-attach-file">официальное письмо</a>
+									</div>
+									<div class="slider-reviews__item swiper-slide">
+										<div class="slider-reviews__title">
+											<a href="https://www.nespresso.com/ru/ru/" class="slider-reviews__logo" target="_blank"><img src="img/clients/logo/nespresso.svg" alt=""></a>
+											<div class="slider-reviews__auth">
+												<h3 class="slider-reviews__name"><a href="https://www.nespresso.com/ru/ru/" target="_blank">Антони Дюваль</a></h3>
+												<p class="slider-reviews__pos">Глобальный менеджер <br>по клиентскому сервису Nespresso</p>
+											</div>
+										</div>
+										<div class="slider-reviews__text">
+											<span class="_badge slider-reviews__badge slider-reviews__badge-1"></span>
+											<span class="_badge slider-reviews__badge slider-reviews__badge-2"></span>
+											<p>C 2016 года CHECK INSIGHT и Nespresso работают вместе, улучшая сервис в офлайн и онлайн сегментах нашего бизнеса. Как партнеры, мы разделяем общие взгляды на долгосрочные отношения, построенные на доверии, прозрачности и готовности совершенствоваться.</p>
+										</div>
+										<a href="#" class="slider-reviews__btn _icon-attach-file">официальное письмо</a>
+									</div>
+									<div class="slider-reviews__item swiper-slide">
 										<div class="slider-reviews__title">
 											<a href="https://www.nespresso.com/ru/ru/" class="slider-reviews__logo" target="_blank"><img src="img/clients/logo/nespresso.svg" alt=""></a>
 											<div class="slider-reviews__auth">
@@ -364,7 +476,8 @@
 										<a href="#" class="slider-reviews__btn _icon-attach-file">официальное письмо</a>
 									</div>
 								</div>
-								<div class="slider-reviews__dots"></div>
+								<div class="slider-reviews__dots swiper-pagination">
+								</div>
 							</div>
 						</div>
 					</div>
