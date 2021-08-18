@@ -42,7 +42,7 @@ function timer(year, month, day) {
 }
 
     // Внимание!!! Месяца в JavaScript начинаются с 0 а не с 1
-timer(2021, 07, 18);
+timer(2021, 07, 22);
 
 
 // SWIPER -> Slider sect. reviews
