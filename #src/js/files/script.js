@@ -1,17 +1,17 @@
 // Timer
 
-    // Настраиваем изменение окончания слов (часов, минут, секунд)
+// Настраиваем изменение окончания слов (часов, минут, секунд)
 let decCache = [],
     decCases = [2, 0, 1, 1, 1, 2];
 
 function decOfNum(number, titles) {
-    if(!decCache[number]) decCache[number] = number % 100 > 4 && number % 100 < 20 ? 2 : decCases[Math.min(number % 10, 5)];
+    if (!decCache[number]) decCache[number] = number % 100 > 4 && number % 100 < 20 ? 2 : decCases[Math.min(number % 10, 5)];
     return titles[decCache[number]];
 }
 
-    // сам таймер
+// сам таймер
 function timer(year, month, day) {
-    setInterval(function() {
+    setInterval(function () {
         let hoursLeft = document.querySelector('.timer-hrs-l'),
             hoursRight = document.querySelector('.timer-hrs-r'),
             hoursText = document.querySelector('.timer-name-hrs'),
@@ -28,9 +28,9 @@ function timer(year, month, day) {
             hoursNumber = Math.floor(sec / 3600),
             minutesNumber = Math.floor(secToMinutes / 60),
             secondsNumber = secToMinutes % 60;
-        hoursText.innerHTML = decOfNum(hoursNumber, ['час','часа','часов']);
-        minutesText.innerHTML = decOfNum(minutesNumber, ['минута','минуты','минут']);
-        secText.innerHTML = decOfNum(secondsNumber, ['секунда','секунды','секунд']);
+        hoursText.innerHTML = decOfNum(hoursNumber, ['час', 'часа', 'часов']);
+        minutesText.innerHTML = decOfNum(minutesNumber, ['минута', 'минуты', 'минут']);
+        secText.innerHTML = decOfNum(secondsNumber, ['секунда', 'секунды', 'секунд']);
         hoursLeft.innerHTML = Math.floor(hoursNumber / 10);
         hoursRight.innerHTML = hoursNumber - (Math.floor(hoursNumber / 10) * 10);
         minutesLeft.innerHTML = Math.floor(minutesNumber / 10);
@@ -38,11 +38,11 @@ function timer(year, month, day) {
         secLeft.innerHTML = Math.floor(secondsNumber / 10);
         secRight.innerHTML = secondsNumber - (Math.floor(secondsNumber / 10) * 10);
 
-    },1000)
+    }, 1000)
 }
 
-    // Внимание!!! Месяца в JavaScript начинаются с 0 а не с 1
-timer(2021, 09, 06);
+// Внимание!!! Месяца в JavaScript начинаются с 0 а не с 1
+timer(2023, 09, 06);
 
 
 // SWIPER -> Slider sect. reviews
@@ -55,7 +55,7 @@ const swiperReviews = new Swiper('.slider-reviews', {
             navigation: {
                 nextEl: '.reviews__btn-right',
                 prevEl: '.reviews__btn-left',
-              },
+            },
             pagination: {
                 el: '.swiper-pagination',
                 type: 'bullets',
@@ -79,11 +79,11 @@ const swiperReviews = new Swiper('.slider-reviews', {
     navigation: {
         nextEl: '.reviews__btn-right',
         prevEl: '.reviews__btn-left',
-      },
+    },
     pagination: {
-    el: '.swiper-pagination',
-    type: 'bullets',
-    clickable: true,
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
     },
 });
 
@@ -98,23 +98,23 @@ const swiperCases = new Swiper('.cases__slider', {
     navigation: {
         nextEl: '.cases__arrow-right',
         prevEl: '.cases__arrow-left',
-      },
+    },
     pagination: {
-    el: '.cases__dots',
-    type: 'bullets',
-    clickable: true,
+        el: '.cases__dots',
+        type: 'bullets',
+        clickable: true,
     },
 });
 
-function checkCasesName () {
-    setInterval (function() {
+function checkCasesName() {
+    setInterval(function () {
         let casesBtnPrevText = document.querySelector('.cases .swiper-slide-prev .cases__subtitle a').innerHTML;
-            casesBtnNextText = document.querySelector('.cases .swiper-slide-next .cases__subtitle a').innerHTML;
-            casesBtnPrev = document.querySelector('.cases__arrow-left');
-            casesBtnNext = document.querySelector('.cases__arrow-right');
+        casesBtnNextText = document.querySelector('.cases .swiper-slide-next .cases__subtitle a').innerHTML;
+        casesBtnPrev = document.querySelector('.cases__arrow-left');
+        casesBtnNext = document.querySelector('.cases__arrow-right');
         casesBtnPrev.innerHTML = casesBtnPrevText;
         casesBtnNext.innerHTML = casesBtnNextText;
-    },100)
+    }, 100)
 }
 
 checkCasesName();
